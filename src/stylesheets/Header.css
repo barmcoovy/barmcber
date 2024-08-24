@@ -1,0 +1,53 @@
+
+*{
+    color: white;
+}
+.container{
+    padding: 20px;
+    width: 100%;
+    background-color: rgb(106, 106, 222);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+}
+.controls{
+    margin-left: 30px;
+    display: flex;
+    justify-content: space-between;
+    gap: 60px;
+
+}
+span{
+    cursor: pointer;
+    height: 100%;
+    width: 100px;
+    text-align: center;
+    position: relative;
+    display: inline-block;
+}
+span::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: #fff;
+    left: 0;
+    bottom: -2px;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-in-out;
+}
+span:hover::after{
+    transform: scaleX(1);
+    transform-origin: bottom left;
+
+}
+@keyframes underline {
+    from{
+        width: 0;
+    }
+    to{
+        width: 100%;
+    }
+}
